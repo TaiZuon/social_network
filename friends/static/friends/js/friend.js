@@ -212,23 +212,58 @@ show_list_friend();
 
 //hiện danh sách gợi ý
 
-url_list_suggest_friend = "/friends/get_suggestionfriend/";
+// url_list_suggest_friend = "/friends/get_suggestionfriend/";
+// function show_suggest_friend(){
+//     fetch(url_list_suggest_friend)
+//     .then(response => response.json())
+//     .then(data => {
+//         console.log("suggest_friend_list:",data);
+//         data.suggestions.forEach(function(suggestions){
+//             console.log(suggestions.suggestions_friend.id);
+//             var url = `/userprofiles/?id=${suggestions.suggestions_friend.id}`;
+//             var a = `
+//             <div class="card1" id="${suggestions.suggestions_friend.id}">
+//                 <div class="card1-img">
+//                     <img style="object-fit: cover;width: 100%;height: 100%;" src="${suggestions.suggestions_friend.avatar}" alt="Card Image" >
+//                 </div>
+//                 <a href="${url}" style="text-decoration: none;color:black;flex:1">
+//                     <div class="card1-content">
+//                         <h3>${suggestions.suggestions_friend.name}</h3>
+//                     </div>
+//                 </a>
+//                 <div class="card1-button">
+//                     <button class="button1" onclick="request_button(event)">Thêm bạn bè</button>
+//                     <button class="button2" onclick="remove_btn_friendrequest(event)">Xóa</button>
+//                 </div>
+//             </div>`
+//             var newDiv = document.createElement("div");
+//             newDiv.innerHTML = a;
+    
+//             suggest_list.appendChild(newDiv);
+//         })
+//     })
+// }
+
+let count_suggest_friend = 0;
+
 function show_suggest_friend(){
+    var count = count_suggest_friend + 30;
+    url_list_suggest_friend = `/friends/get_suggestionfriend/?count=${count}`;
     fetch(url_list_suggest_friend)
     .then(response => response.json())
     .then(data => {
         console.log("suggest_friend_list:",data);
-        data.suggestions.forEach(function(suggestions){
-            console.log(suggestions.suggestions_friend.id);
-            var url = `/userprofiles/?id=${suggestions.suggestions_friend.id}`;
+        for(let i = count_suggest_friend + 1;i <= Math.min(count_suggest_friend + 30,data.suggestions.length);++i){
+            console.log("a: ",data.suggestions[i]);
+            var url = `/userprofiles/?id=${data.suggestions[i].suggestions_friend.id}`;
             var a = `
-            <div class="card1" id="${suggestions.suggestions_friend.id}">
+            <div class="card1" id="${data.suggestions[i].suggestions_friend.id}">
                 <div class="card1-img">
-                    <img style="object-fit: cover;width: 100%;height: 100%;" src="${suggestions.suggestions_friend.avatar}" alt="Card Image" >
+                    <img style="object-fit: cover;width: 100%;height: 100%;" src="${data.suggestions[i].suggestions_friend.avatar}" alt="Card Image" >
                 </div>
                 <a href="${url}" style="text-decoration: none;color:black;flex:1">
                     <div class="card1-content">
-                        <h3>${suggestions.suggestions_friend.name}</h3>
+                        <h3>${data.suggestions[i].suggestions_friend.name}</h3>
                     </div>
                 </a>
                 <div class="card1-button">
@@ -240,22 +275,9 @@ function show_suggest_friend(){
             newDiv.innerHTML = a;
     
             suggest_list.appendChild(newDiv);
-        })
+        }
     })
 }
-
-// let count_suggest_friend = 1;
-// url_list_suggest_friend = `/friends/get_suggestionfriend/?count=${count_suggest_friend}`;
-// function show_suggest_friend(){
-//     fetch(url_list_suggest_friend)
-//     .then(response => response.json())
-//     .then(data => {
-//         console.log("suggest_friend_list:",data);
-//         for(let i = count_suggest_friend;i <= Math.min(count_suggest_friend + 29,data.suggestions.length);++i){
-//             console.log("a: ",i);
-//         }
-//     })
-// }
 
 
 show_suggest_friend();
@@ -266,6 +288,8 @@ suggest_list.addEventListener('scroll', function() {
     if (suggest_list.scrollTop + suggest_list.clientHeight >= suggest_list.scrollHeight) {
         // Xử lí khi cuộn đạt đến cuối của div ở đây
         console.log("Đã đạt đến cuối của div!");
+        count_suggest_friend += 30;
+        show_suggest_friend();
     }
 });
 
@@ -289,7 +313,7 @@ function show_get_sentfriendrequest(){
                 var url = `/userprofiles/?id=${friend.friend_request_profile.id}`;
                 var a = `
                 <a href="${url}" style="text-decoration: none;color:black;">
-                    <div class="card" id="${friend.friend_request_profile.id}">
+                    <div class="card0" id="${friend.friend_request_profile.id}">
                         <div class="card-img">
                             <img style="display: flex; width: 100%; height: 100%;" src="${friend.friend_request_profile.avatar}" alt="Card Image">
                         </div>
