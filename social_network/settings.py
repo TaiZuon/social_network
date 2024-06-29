@@ -119,29 +119,29 @@ CHANNEL_LAYERS = {
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    #     'NAME': 'social_network',
-    #     'USER': 'postgres',
-    #     'PASSWORD': 'postgres',
-    #     'HOST': '127.0.0.1',
-    #     'PORT': '5001',
-    # },
-    # 'replica': {
-    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    #     'NAME': 'social_network',
-    #     'USER': 'postgres',
-    #     'PASSWORD': 'postgres',
-    #     'HOST': '127.0.0.1',
-    #     'PORT': '5002',
-    # },
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'social_network',
-        'USER': 'admin',
-        'PASSWORD': 'abc123',
+        'USER': 'postgresadmin',
+        'PASSWORD': 'admin123',
         'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'PORT': '5001',
+    },
+    'replica': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'social_network',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': '127.0.0.1',
+        'PORT': '5000',
+    # },
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #     'NAME': 'social_network',
+    #     'USER': 'admin',
+    #     'PASSWORD': 'abc123',
+    #     'HOST': '127.0.0.1',
+    #     'PORT': '5432',
     }
 }
 
@@ -155,8 +155,8 @@ MONGODB_DATABASES = {
         "name": "social_network",
         "host": "localhost",
         "port": 27017,
-        # "username": "mongo_user",  # replace with your username
-        # "password": "mongo_password",  # replace with your password
+        # "username": "mongo_user",
+        # "password": "mongo_password",  
     }
 }
 

@@ -1,9 +1,11 @@
 {
     "cSpell.words": [
         "CONNECTIONSTRING",
+        "corsheaders",
         "duong",
         "feisu",
         "messeeji",
+        "postgresadmin",
         "psycopg",
         "userprofiles",
         "whitenoise"

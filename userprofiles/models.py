@@ -38,15 +38,6 @@ class ImageProfile(models.Model):
         indexes = [
             models.Index(fields=['user_id'])
         ]
-    
-# class LinkProfile(models.Model):
-#     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
-#     link = models.CharField(max_length=255, null=False)
-    
-#     class Meta:
-#         indexes = [
-#             models.Index(fields=['user_id'])
-#         ]
 
 # model mongodb
 from django_mongoengine import fields, EmbeddedDocument
