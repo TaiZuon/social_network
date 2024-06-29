@@ -88,13 +88,14 @@ class SentFriendRequestView(APIView):
             return Response({'error': 'Unauthorized'}, status=401)
 
         to_user_id = request.data.get('id')
+        from_user_id = user.id
         logger.info(f"Sending friend request to user {to_user_id}.")
         
         # Gọi hàm procedure để kiểm tra giới hạn số lượng bạn bè
         try:
             with transaction.atomic():
                 with connection.cursor() as cursor:
-                    cursor.execute('CALL check_friend_limit(%s)', [to_user_id])
+                    cursor.execute(f'CALL check_friend_limit({from_user_id}, %s)', [to_user_id])
         except Exception as e:
             print(e)
             return Response({'error': str(e)}, status=400)
@@ -106,7 +107,7 @@ class SentFriendRequestView(APIView):
                     cursor.execute(
                         "INSERT INTO friends_friendrequest (from_id_id, to_id_id, status, created_at, updated_at) "
                         "VALUES (%s, %s, %s, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)",
-                        [user.id, to_user_id, 'pending']
+                        [from_user_id, to_user_id, 'pending']
                     )
             for friend_request in FriendRequest.objects.raw("SELECT * FROM friends_friendrequest WHERE from_id_id = %s AND to_id_id = %s AND status = %s",
                                             [user.id, to_user_id, 'pending']) :
@@ -683,7 +684,8 @@ class GetListFriendOfUserOtherView(generics.ListAPIView):
             logger.error("Unauthorized access to GetListFriendOfUserOtherView. Returning 401 error.")
             return Response({'error': 'Unauthorized'}, status=401)
         
-        other_user_id = request.query_params.get('id') 
+        other_user_id = request.query_params.get('id')
+        print(f"other user id isssss: {other_user_id}") 
         
         try:
             key = f"all_friends_{other_user_id}"
