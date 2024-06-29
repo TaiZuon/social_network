@@ -587,17 +587,21 @@ class GetSuggestionFriendView(generics.ListAPIView):
         
         try:
             queryset = self.get_queryset()
-
+            
             page = self.paginate_queryset(queryset)
+            
             if page is not None: 
                 for other_user in page:
-                    suggesion = get_object_or_404(User, id=other_user)
-                    suggesions = {
-                        "suggestions_friend": getUserProfileForPosts(suggesion)
+                    suggestion = get_object_or_404(User, id=other_user)
+                    # print(f"sg is: {suggestion}")
+                    suggestions = {
+                        "suggestions_friend": getUserProfileForPosts(suggestion)
                     }
-                    data.append(suggesions)
+                    # print(f"its profile: {suggestions}")
+                    data.append(suggestions)
         except Exception as e:
             logger.error(f"Error while retrieving friend suggestions: {str(e)}")
+            # print(f"sg fr err: {e}")
             return Response({'error': 'Error while retrieving friend suggestions'}, status=400)
         
         return self.get_paginated_response({"suggestions": data})

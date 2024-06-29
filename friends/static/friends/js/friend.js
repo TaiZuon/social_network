@@ -35,8 +35,8 @@ function denine_button(event){
 
 //xử lí accept button
 function accept_button(event){
-    if(event.target.textContent === "Xác nhận") {
-        event.target.textContent = "Đã xác nhận";
+    if(event.target.textContent === "Confirm") {
+        event.target.textContent = "Confirmed";
         event.target.style.backgroundColor = '#B8BABE';
     }
     var a = event.target.parentNode.parentNode.id;
@@ -79,7 +79,7 @@ function accept_button(event){
 //xử lí friend request button
 function request_button(event){
     var a = event.target.parentNode.parentNode.id;
-    if(event.target.textContent === "Thêm bạn bè") {
+    if(event.target.textContent === "Add friend") {
         event.target.textContent = "Thu hồi";
         var formdata = new FormData();
         formdata.append("st", "pending");
@@ -100,7 +100,7 @@ function request_button(event){
         })
     }
     else{
-        event.target.textContent = "Thêm bạn bè";
+        event.target.textContent = "Add friend";
         var formdata = new FormData();
         formdata.append("st","revoke");
         formdata.append("id",a);
@@ -176,8 +176,8 @@ function addfriend() {
                     </div>
                 </a>
                 <div class="card1-button">
-                    <button class="button1" onclick="accept_button(event)">Xác nhận</button>
-                    <button class="button2" onclick="denine_button(event)">Từ chối</button>
+                    <button class="button1" onclick="accept_button(event)">Confirm</button>
+                    <button class="button2" onclick="denine_button(event)">Reject</button>
                 </div>
             </div>`;
             var newDiv = document.createElement("div");
@@ -281,8 +281,8 @@ function show_suggest_friend(){
                     </div>
                 </a>
                 <div class="card1-button">
-                    <button class="button1" onclick="request_button(event)">Thêm bạn bè</button>
-                    <button class="button2" onclick="remove_btn_friendrequest(event)">Xóa</button>
+                    <button class="button1" onclick="request_button(event)">Add friend</button>
+                    <button class="button2" onclick="remove_btn_friendrequest(event)">Remove</button>
                 </div>
             </div>`
             var newDiv = document.createElement("div");
@@ -318,7 +318,7 @@ function show_get_sentfriendrequest(){
         var Friend_list = document.querySelector(".list");
         Friend_list.appendChild(list_friend);
         var p = document.createElement("div");
-        p.innerHTML =`<div style="font-size: large; color: rgb(0, 110, 255); margin: 10px;text-decoration: underline;"> Người bạn đã gửi lời mời </div>`;
+        p.innerHTML =`<div style="font-size: large; color: rgb(0, 110, 255); margin: 10px;text-decoration: underline;"> Waiting for response </div>`;
         list_friend.appendChild(p);
         data.data.forEach(function(friend){
             if(friend.friend_request_sent.status ==="pending"){

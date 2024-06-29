@@ -17,7 +17,6 @@ function get_user_profile() {
         .catch(error => {
             console.error('Error:', error);
         });
-
 }
 
 get_user_profile();

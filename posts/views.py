@@ -288,7 +288,8 @@ class GetPostsForHomePageView(APIView):
     def filterPosts(self, user_id):
         try:        
             # Get all posts that the user has not watched
-            posts_is_watched_ids = [int(id) for id in redis_server.smembers(f'user:{user_id}:watched_posts')]
+            # posts_is_watched_ids = [int(id) for id in redis_server.smembers(f'user:{user_id}:watched_posts')]
+            posts_is_watched_ids = []
             logger.debug('posts_is_watched_ids: %s', posts_is_watched_ids)
             print('posts_is_watched_ids', posts_is_watched_ids)
 

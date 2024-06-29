@@ -192,26 +192,17 @@ class UserProfileBasicView(APIView):
         return context
         
     def getUserProfileBasic(self, user):
-        userprofileBasic = redis_server.get(f'userprofile_basic_{user.id}')
+        userprofile = UserProfile.objects.filter(user_id=user).first()
+        imageprofile = ImageProfile.objects.filter(user_id=user).first()
         
-        if userprofileBasic is None:
-            userprofile = UserProfile.objects.filter(user_id=user).first()
-            imageprofile = ImageProfile.objects.filter(user_id=user).first()
-            
-            profileSerializer = UserProfileSerializer(userprofile)
-            imageSerializer = ImageProfileSerializer(imageprofile)
-            
-            context = {
-                'id': user.id,
-                'name': f"{profileSerializer.data.get('first_name')} {profileSerializer.data.get('last_name')}",
-                'avatar': imageSerializer.data.get('avatar')
-            }
-            
-            time_to_live = EX_TIME + random.randint(INT_FROM, INT_TO)
-            
-            redis_server.setex(f'userprofile_basic_{user.id}', time_to_live , json.dumps(context))
-        else :
-            context = json.loads(userprofileBasic)
+        profileSerializer = UserProfileSerializer(userprofile)
+        imageSerializer = ImageProfileSerializer(imageprofile)
+        
+        context = {
+            'id': user.id,
+            'name': f"{profileSerializer.data.get('first_name')} {profileSerializer.data.get('last_name')}",
+            'avatar': imageSerializer.data.get('avatar')
+        }
             
         return context
     
@@ -225,4 +216,5 @@ class UserProfileBasicView(APIView):
         context = self.getUserProfileBasic(user)
 
         return Response(context)
+    
     

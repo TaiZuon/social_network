@@ -335,7 +335,7 @@ class ProfileDetail(generics.RetrieveUpdateAPIView):
     permission_classes = [IsAuthenticated]
 
 class CustomPagination(PageNumberPagination):
-    page_size = 2
+    page_size = 1
     page_size_query_param = 'page_size'
     max_page_size = 100
 
@@ -468,8 +468,8 @@ class ContactUsers(generics.ListAPIView):
 
         senders_list_info_iter = iter(senders_list_info)
         for user in serializer.data:
+            print(f"user: {user}")
             try:
-                
                 user_img = getUserProfileForPosts(User.objects.get(id=user['id']))['avatar']
                 user['avatar'] = user_img
                 sender_info = next(senders_list_info_iter)

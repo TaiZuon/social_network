@@ -76,7 +76,7 @@ function renderComments(data, idElement) {
 
           <div id="icon-top-reactions-comment-container-${commentId}"></div>
           <div id="count-reaction-comment-${commentId}" style="margin-right: 5px;">
-            120
+            watched
           </div>
 
           <span class="comment-wish text-action" style="margin-right: 20px; font-size: 14px;cursor: pointer;" 
