@@ -11,7 +11,7 @@
 </td>
 
 ## Demo
-- Link to the demo video is [here]().
+- Link to the demo video is [here](https://youtu.be/xHnNuKbU6_s).
 
 ## Technology used
 -	Backend: Django
