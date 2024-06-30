@@ -80,7 +80,7 @@ function accept_button(event){
 function request_button(event){
     var a = event.target.parentNode.parentNode.id;
     if(event.target.textContent === "Add friend") {
-        event.target.textContent = "Thu hồi";
+        event.target.textContent = "Undo";
         var formdata = new FormData();
         formdata.append("st", "pending");
         formdata.append("id", a);

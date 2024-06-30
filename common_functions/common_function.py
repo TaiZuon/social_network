@@ -11,7 +11,7 @@ import jwt
 def getUserProfileForPosts(user):
         userprofile = UserProfile.objects.filter(user_id=user).values('first_name', 'last_name').first()
         imageprofile = ImageProfileSerializer(ImageProfile.objects.filter(user_id=user).first())
-        print("i got here!")
+        #print("i got here!")
         data = {
             "id": user.id,
             "name": f"{userprofile.get('first_name')} {userprofile.get('last_name')}",

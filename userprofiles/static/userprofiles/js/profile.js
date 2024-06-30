@@ -260,21 +260,45 @@ fetch(api_get_profile)
 
         // edit story
         var intro_bio = document.getElementById('intro_bio');
-        intro_bio.innerHTML += `<p>${data.userprofile['bio']}</p>`;
+        if (data.userprofile['bio'] == null) {
+            intro_bio.innerHTML += `<p>Your bio</p>`;
+        } else {
+            intro_bio.innerHTML += `<p>${data.userprofile['bio']}</p>`;
+        }
 
         var work = document.getElementById('work');
-        work.innerHTML += `${data.userprofile['work']}`;
+        if (data.userprofile['work'] == null) {
+            work.innerHTML += `<p>Work information not available</p>`;
+        } else {
+            work.innerHTML += `<p>${data.userprofile['work']}</p>`;
+        }
 
         var address_work = document.getElementById('address_work');
-        address_work.innerHTML += `${data.userprofile['address_work']}`;
+        if (data.userprofile['address_work'] == null) {
+            address_work.innerHTML += `<p>Work address not available</p>`;
+        } else {
+            address_work.innerHTML += `<p>${data.userprofile['address_work']}</p>`;
+        }
 
         var address = document.getElementById('address');
-        address.innerHTML += `${data.userprofile['address']}`;
+        if (data.userprofile['address'] == null) {
+            address.innerHTML += `<p>Address not available</p>`;
+        } else {
+            address.innerHTML += `<p>${data.userprofile['address']}</p>`;
+        }
 
         var place_birth = document.getElementById('place_birth');
-        place_birth.innerHTML += `${data.userprofile['place_birth']}`;
+        if (data.userprofile['place_birth'] == null) {
+            place_birth.innerHTML += `<p>Place of birth not available</p>`;
+        } else {
+            place_birth.innerHTML += `<p>${data.userprofile['place_birth']}</p>`;
+        }
 
         var social_link = document.getElementById('social_link');
-        social_link.innerHTML += `<a href="https://www.instagram.com/${data.userprofile['social_link']}/"><p>${data.userprofile['social_link']}</p></a>`;
-        // social_link.innerHTML  += `<a href=></a>${data.userprofile['social_link']}`;
+        if (data.userprofile['social_link'] == null) {
+            social_link.innerHTML += `<p>Social link not available</p>`;
+        } else {
+            social_link.innerHTML += `<a href="https://www.instagram.com/${data.userprofile['social_link']}/"><p>${data.userprofile['social_link']}</p></a>`;
+        }
+                // social_link.innerHTML  += `<a href=></a>${data.userprofile['social_link']}`;
     })

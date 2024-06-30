@@ -4,6 +4,7 @@ import json
 from django.shortcuts import render
 from django.urls import reverse
 from django.db.models import Subquery, OuterRef, Q
+from django.db.models import Case, When
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -13,9 +14,10 @@ from rest_framework import status
 
 
 from .serializers import UserInfoSerializer, ChannelSerializer, MesseejiSerializer
-
+from friends.serializers import FriendshipSerializer
 from users.models import User
 from userprofiles.models import UserProfile
+from friends.models import Friendship
 
 from .models import Channel, Messeeji, Participants
 
@@ -74,12 +76,8 @@ class GetMesseeji(APIView):
     def post(self, request):
         try:
             channel_id = request.data.get('channel_id')
-            key = f"all_chat_channel_{channel_id}"
-            if (cache.get(key)):
-                all_messeeji = cache.get(key)
-            else: 
-                all_messeeji = Messeeji.objects(channel_id=channel_id)
-                cache.set(f"all_chat_channel_{channel_id}", all_messeeji)
+
+            all_messeeji = Messeeji.objects(channel_id=channel_id)
             
             response = Response()
             data = []
@@ -335,7 +333,7 @@ class ProfileDetail(generics.RetrieveUpdateAPIView):
     permission_classes = [IsAuthenticated]
 
 class CustomPagination(PageNumberPagination):
-    page_size = 1
+    page_size = 4
     page_size_query_param = 'page_size'
     max_page_size = 100
 
@@ -398,6 +396,20 @@ class SearchUser(generics.ListAPIView):
 class ContactUsers(generics.ListAPIView):
     pagination_class = CustomPagination
 
+    def get_friends_list(self, user_id):
+        
+        res = []
+        friendships = Friendship.objects.filter(Q(user_id1_id=user_id) | Q(user_id2_id=user_id))
+        
+        for fr in friendships:
+            f = FriendshipSerializer(fr)
+            if (f['user_id1'].value == user_id):
+                res.append(f['user_id2'].value)
+            else:
+                res.append(f['user_id1'].value)
+        print(f"list fr: {res}")
+        return res
+
     def get_nearest_unread_messeeji(self, channel_id, current_user_id):
         collection = Messeeji._get_collection()
         # Write your raw MongoDB find query
@@ -426,14 +438,16 @@ class ContactUsers(generics.ListAPIView):
         # Filter all channels that the current user joins
         user_channels = Participants.objects(user_id=current_user_id)
         # print("a")
-        # print(f"all parti: {user_channels}")
-
+        print(f"all parti: {user_channels}")
+        print(f"curr user: {current_user_id}")
         # Find the newest unread Messeeji and its sender from each channel, where the sender is not the current user
         senders_list_info = []
         for channel in user_channels:
             res = self.get_nearest_unread_messeeji(channel.channel_id, current_user_id)
             newest_unread_messeeji = res[0]
-            unread_amount = res[1]
+            unread_amount = res[1] #* 0 # not done yet
+            # print(f"in channel: {channel.channel_id}")
+            # print(f"unread amount: {unread_amount}")
             # print(f"new new new: {newest_unread_messeeji}")
             if newest_unread_messeeji:
                 sender_profile = UserProfile.objects.get(user_id=newest_unread_messeeji['sender_id'])
@@ -441,51 +455,71 @@ class ContactUsers(generics.ListAPIView):
                     'sender': sender_profile,
                     'channel_id': channel.channel_id,
                     'created_at': newest_unread_messeeji['created_at'],
-                    'unread_amount' : unread_amount 
+                    'unread_amount' : unread_amount,
+                    'last_mess': newest_unread_messeeji
                 })
 
-        # print(f"sender_list bf: {senders_list_info}")
+        print(f"sender_list bf: {senders_list_info}")
         # Sort the list of senders by the time of the newest unread Messeeji
         senders_list_info.sort(key=lambda x: x['created_at'] if x['created_at'] else datetime.min, reverse=True)
-        # print(f"sender_list af: {senders_list_info}")
+        print(f"sender_list af: {senders_list_info}")
         sender_ids = [sender_info['sender'].user_id for sender_info in senders_list_info]
+        list_contact_ids = self.get_friends_list(current_user_id)
 
-        # Get all user IDs except those in sender_ids
-        all_user_ids = UserProfile.objects.exclude(user_id__in=sender_ids).exclude(user_id=current_user_id).values_list('user_id', flat=True)
+        for id in list_contact_ids:
+            if id not in sender_ids:
+                sender_ids.append(id)
 
-        sender_ids.extend(all_user_ids)
+        # # Get all user IDs except those in sender_ids
+        # all_user_ids = UserProfile.objects.exclude(user_id__in=sender_ids).exclude(user_id=current_user_id).values_list('user_id', flat=True)
 
-        senders_queryset = UserProfile.objects.filter(user_id__in=sender_ids)
+        # sender_ids.extend(all_user_ids)
+
+        # senders_queryset = UserProfile.objects.filter(user_id__in=sender_ids)
+
+        # Create a Case statement to preserve the order of sender_ids
+        order = Case(*[When(user_id=pk, then=pos) for pos, pk in enumerate(sender_ids)])
+
+        # Filter and order the queryset
+        senders_queryset = UserProfile.objects.filter(user_id__in=sender_ids).order_by(order)
 
         page = self.paginate_queryset(senders_queryset)
 
         data = []
         serializer = UserInfoSerializer(page, many=True)
         # print(f"data is: {serializer.data}")
-        # print(f"sender_list: {senders_list_info}")
+        #print(f"sender_list: {senders_list_info}")
     
         data = []
 
-        senders_list_info_iter = iter(senders_list_info)
+        # print(f"hey: {type(serializer.data)}")
+
+        i = 0
+        l = len(senders_list_info)
         for user in serializer.data:
-            print(f"user: {user}")
             try:
                 user_img = getUserProfileForPosts(User.objects.get(id=user['id']))['avatar']
+                print(f"{user['first_name']}")
                 user['avatar'] = user_img
-                sender_info = next(senders_list_info_iter)
-                user['unread_amount'] = sender_info['unread_amount']
+                if (i < l):
+                    user['unread_amount'] = senders_list_info[i]['unread_amount']
+                else:
+                    user['unread_amount'] = 0
+                    i += 1
+                i += 1
+                # print(f"append_this: {user}")
                 data.append(user)
-            except StopIteration:
-                # Handle the case where sender_list_info runs out
-                user['unread_amount'] = 0
-                data.append(user)
-            except UserProfile.DoesNotExist:
-                # Handle the case where the sender's profile doesn't exist
-                user['unread_amount'] = 0
-                data.append(user)
+            # except StopIteration:
+            #     # Handle the case where sender_list_info runs out
+            #     user['unread_amount'] = 0
+                
+            #     data.append(user)
+            except Exception as e:
+                print(f"ex: {e}")
 
 
-        # print(f"final data: {data}")
+
+        print(f"final data: {data}")
         return self.get_paginated_response({
             "list_users": data,
             "current_user": current_user_id,
