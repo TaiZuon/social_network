@@ -9884,3 +9884,403 @@ CONTEXT:  PL/pgSQL function prevent_pending_friend_request() line 10 at RAISE
 2024-06-30 13:16:21,137:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
 2024-06-30 13:16:21,650:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
 2024-06-30 13:16:21,656:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-06-30 15:32:01,698:INFO - homepage.views views.py (line 19). GET request received in HomePageView
+2024-06-30 15:32:01,823:INFO - homepage.views views.py (line 45). Rendering homepage
+2024-06-30 15:32:03,598:DEBUG - posts.views views.py (line 293). posts_is_watched_ids: []
+2024-06-30 15:32:03,713:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-06-30 15:32:03,780:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-06-30 15:32:04,199:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-06-30 15:32:04,205:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-06-30 15:32:04,700:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-06-30 15:32:04,705:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-06-30 15:32:05,233:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-06-30 15:32:05,241:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-06-30 15:32:05,710:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-06-30 15:32:05,716:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-06-30 15:32:06,219:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-06-30 15:32:06,224:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-06-30 15:32:07,234:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-06-30 15:32:07,239:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-06-30 15:32:07,245:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-06-30 15:32:07,251:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-06-30 15:32:08,231:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-06-30 15:32:08,237:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-06-30 15:32:08,243:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-06-30 15:32:08,248:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:41:28,938:INFO - homepage.views views.py (line 19). GET request received in HomePageView
+2024-09-24 20:41:28,952:ERROR - homepage.views views.py (line 31). Expired JWT token
+2024-09-24 20:41:28,953:INFO - users.views views.py (line 173). POST request received in LogoutView
+2024-09-24 20:41:28,981:INFO - users.views views.py (line 35). User attempts to access the login page.
+2024-09-24 20:42:39,215:INFO - users.models models.py (line 26). Password updated for user: a@gmail.com
+2024-09-24 20:42:39,424:INFO - userprofiles.views views.py (line 154). User profile created successfully!
+2024-09-24 20:42:40,907:INFO - userprofiles.views views.py (line 34). GET request received in ProfileView.
+2024-09-24 20:42:40,907:INFO - userprofiles.views views.py (line 40). Rendering profile.html.
+2024-09-24 20:42:43,642:ERROR - posts.views views.py (line 205). No more posts available.
+2024-09-24 20:42:54,175:INFO - userprofiles.views views.py (line 34). GET request received in ProfileView.
+2024-09-24 20:42:54,176:INFO - userprofiles.views views.py (line 40). Rendering profile.html.
+2024-09-24 20:42:55,307:ERROR - posts.views views.py (line 205). No more posts available.
+2024-09-24 20:42:58,429:INFO - homepage.views views.py (line 19). GET request received in HomePageView
+2024-09-24 20:42:58,479:INFO - homepage.views views.py (line 45). Rendering homepage
+2024-09-24 20:42:59,616:DEBUG - posts.views views.py (line 293). posts_is_watched_ids: []
+2024-09-24 20:42:59,782:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:42:59,793:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:43:00,283:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:43:00,295:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:43:00,784:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:43:00,802:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:43:01,295:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:43:01,313:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:43:01,793:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:43:01,798:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:43:04,186:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:43:04,198:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:43:04,203:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:43:04,209:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:43:04,343:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:43:04,348:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:43:04,358:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:43:04,449:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:43:04,523:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:43:04,528:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:43:08,768:DEBUG - posts.views views.py (line 293). posts_is_watched_ids: []
+2024-09-24 20:43:08,890:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:43:08,895:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:43:09,379:INFO - homepage.views views.py (line 19). GET request received in HomePageView
+2024-09-24 20:43:09,442:INFO - homepage.views views.py (line 45). Rendering homepage
+2024-09-24 20:43:09,518:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:43:09,522:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:43:10,657:DEBUG - posts.views views.py (line 293). posts_is_watched_ids: []
+2024-09-24 20:43:10,760:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:43:10,765:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:43:11,256:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:43:11,261:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:43:11,772:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:43:11,777:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:43:12,259:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:43:12,263:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:43:12,781:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:43:12,786:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:43:13,280:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:43:13,284:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:43:13,753:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:43:13,759:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:43:14,260:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:43:14,265:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:43:14,457:INFO - userprofiles.views views.py (line 34). GET request received in ProfileView.
+2024-09-24 20:43:14,458:INFO - userprofiles.views views.py (line 47). Redirecting to profile page.
+2024-09-24 20:43:14,539:INFO - userprofiles.views views.py (line 34). GET request received in ProfileView.
+2024-09-24 20:43:14,539:INFO - userprofiles.views views.py (line 40). Rendering profile.html.
+2024-09-24 20:43:14,749:INFO - userprofiles.views views.py (line 76). GET request received in GetProfileView.
+2024-09-24 20:43:14,768:INFO - userprofiles.views views.py (line 89). Successfully retrieved profile data.
+2024-09-24 20:43:14,827:INFO - userprofiles.views views.py (line 76). GET request received in GetProfileView.
+2024-09-24 20:43:14,844:INFO - userprofiles.views views.py (line 89). Successfully retrieved profile data.
+2024-09-24 20:43:14,898:INFO - userprofiles.views views.py (line 76). GET request received in GetProfileView.
+2024-09-24 20:43:14,917:INFO - userprofiles.views views.py (line 89). Successfully retrieved profile data.
+2024-09-24 20:43:15,052:INFO - userprofiles.views views.py (line 76). GET request received in GetProfileView.
+2024-09-24 20:43:15,070:INFO - userprofiles.views views.py (line 89). Successfully retrieved profile data.
+2024-09-24 20:43:15,191:INFO - userprofiles.views views.py (line 76). GET request received in GetProfileView.
+2024-09-24 20:43:15,261:INFO - userprofiles.views views.py (line 89). Successfully retrieved profile data.
+2024-09-24 20:43:15,659:ERROR - posts.views views.py (line 205). No more posts available.
+2024-09-24 20:43:18,882:ERROR - posts.views views.py (line 205). No more posts available.
+2024-09-24 20:43:21,041:INFO - userprofiles.viewsEdit viewsEdit.py (line 142). GET request received in EditProfileView.
+2024-09-24 20:43:21,095:INFO - userprofiles.viewsEdit viewsEdit.py (line 142). GET request received in EditProfileView.
+2024-09-24 20:43:21,966:INFO - userprofiles.views views.py (line 76). GET request received in GetProfileView.
+2024-09-24 20:43:21,985:INFO - userprofiles.views views.py (line 89). Successfully retrieved profile data.
+2024-09-24 20:43:23,628:INFO - userprofiles.viewsEdit viewsEdit.py (line 160). POST request received in EditProfileView.
+2024-09-24 20:43:23,650:INFO - userprofiles.viewsEdit viewsEdit.py (line 183). User profile updated successfully.
+2024-09-24 20:43:25,386:INFO - userprofiles.views views.py (line 34). GET request received in ProfileView.
+2024-09-24 20:43:25,386:INFO - userprofiles.views views.py (line 40). Rendering profile.html.
+2024-09-24 20:43:25,562:INFO - userprofiles.views views.py (line 76). GET request received in GetProfileView.
+2024-09-24 20:43:25,580:INFO - userprofiles.views views.py (line 89). Successfully retrieved profile data.
+2024-09-24 20:43:25,645:INFO - userprofiles.views views.py (line 76). GET request received in GetProfileView.
+2024-09-24 20:43:25,672:INFO - userprofiles.views views.py (line 89). Successfully retrieved profile data.
+2024-09-24 20:43:25,746:INFO - userprofiles.views views.py (line 76). GET request received in GetProfileView.
+2024-09-24 20:43:25,773:INFO - userprofiles.views views.py (line 89). Successfully retrieved profile data.
+2024-09-24 20:43:25,913:INFO - userprofiles.views views.py (line 76). GET request received in GetProfileView.
+2024-09-24 20:43:25,929:INFO - userprofiles.views views.py (line 89). Successfully retrieved profile data.
+2024-09-24 20:43:26,046:INFO - userprofiles.views views.py (line 76). GET request received in GetProfileView.
+2024-09-24 20:43:26,062:INFO - userprofiles.views views.py (line 89). Successfully retrieved profile data.
+2024-09-24 20:43:26,516:ERROR - posts.views views.py (line 205). No more posts available.
+2024-09-24 20:43:29,280:INFO - userprofiles.viewsEdit viewsEdit.py (line 30). GET request received in EditImagesPage.
+2024-09-24 20:43:29,338:INFO - userprofiles.viewsEdit viewsEdit.py (line 30). GET request received in EditImagesPage.
+2024-09-24 20:43:29,482:INFO - userprofiles.views views.py (line 76). GET request received in GetProfileView.
+2024-09-24 20:43:29,505:INFO - userprofiles.views views.py (line 89). Successfully retrieved profile data.
+2024-09-24 20:43:55,729:INFO - userprofiles.viewsEdit viewsEdit.py (line 50). POST request received in EditAvatarView.
+2024-09-24 20:43:56,034:INFO - userprofiles.viewsEdit viewsEdit.py (line 83). Avatar image updated successfully.
+2024-09-24 20:43:58,206:INFO - userprofiles.viewsEdit viewsEdit.py (line 95). POST request received in EditCoverView.
+2024-09-24 20:44:07,773:INFO - userprofiles.views views.py (line 34). GET request received in ProfileView.
+2024-09-24 20:44:07,773:INFO - userprofiles.views views.py (line 47). Redirecting to profile page.
+2024-09-24 20:44:07,847:INFO - userprofiles.views views.py (line 34). GET request received in ProfileView.
+2024-09-24 20:44:07,847:INFO - userprofiles.views views.py (line 40). Rendering profile.html.
+2024-09-24 20:44:08,041:INFO - userprofiles.views views.py (line 76). GET request received in GetProfileView.
+2024-09-24 20:44:08,064:INFO - userprofiles.views views.py (line 89). Successfully retrieved profile data.
+2024-09-24 20:44:08,155:INFO - userprofiles.views views.py (line 76). GET request received in GetProfileView.
+2024-09-24 20:44:08,182:INFO - userprofiles.views views.py (line 89). Successfully retrieved profile data.
+2024-09-24 20:44:08,267:INFO - userprofiles.views views.py (line 76). GET request received in GetProfileView.
+2024-09-24 20:44:08,294:INFO - userprofiles.views views.py (line 89). Successfully retrieved profile data.
+2024-09-24 20:44:08,490:INFO - userprofiles.views views.py (line 76). GET request received in GetProfileView.
+2024-09-24 20:44:08,516:INFO - userprofiles.views views.py (line 89). Successfully retrieved profile data.
+2024-09-24 20:44:08,610:INFO - userprofiles.views views.py (line 76). GET request received in GetProfileView.
+2024-09-24 20:44:08,630:INFO - userprofiles.views views.py (line 89). Successfully retrieved profile data.
+2024-09-24 20:44:09,081:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:09,086:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:09,600:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:09,606:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:11,623:ERROR - posts.views views.py (line 205). No more posts available.
+2024-09-24 20:44:11,732:INFO - homepage.views views.py (line 19). GET request received in HomePageView
+2024-09-24 20:44:11,795:INFO - homepage.views views.py (line 45). Rendering homepage
+2024-09-24 20:44:12,924:DEBUG - posts.views views.py (line 293). posts_is_watched_ids: []
+2024-09-24 20:44:13,036:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:13,041:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:13,532:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:13,538:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:14,031:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:14,037:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:14,544:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:14,549:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:14,891:INFO - userprofiles.views views.py (line 34). GET request received in ProfileView.
+2024-09-24 20:44:14,892:INFO - userprofiles.views views.py (line 40). Rendering profile.html.
+2024-09-24 20:44:15,079:INFO - userprofiles.views views.py (line 76). GET request received in GetProfileView.
+2024-09-24 20:44:15,098:INFO - userprofiles.views views.py (line 89). Successfully retrieved profile data.
+2024-09-24 20:44:15,156:INFO - userprofiles.views views.py (line 76). GET request received in GetProfileView.
+2024-09-24 20:44:15,174:INFO - userprofiles.views views.py (line 89). Successfully retrieved profile data.
+2024-09-24 20:44:15,254:INFO - userprofiles.views views.py (line 76). GET request received in GetProfileView.
+2024-09-24 20:44:15,270:INFO - userprofiles.views views.py (line 89). Successfully retrieved profile data.
+2024-09-24 20:44:15,401:INFO - userprofiles.views views.py (line 76). GET request received in GetProfileView.
+2024-09-24 20:44:15,419:INFO - userprofiles.views views.py (line 89). Successfully retrieved profile data.
+2024-09-24 20:44:15,498:INFO - userprofiles.views views.py (line 76). GET request received in GetProfileView.
+2024-09-24 20:44:15,516:INFO - userprofiles.views views.py (line 89). Successfully retrieved profile data.
+2024-09-24 20:44:16,128:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:16,133:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:16,506:INFO - friends.views views.py (line 92). Sending friend request to user 12.
+2024-09-24 20:44:16,654:INFO - notifications.views views.py (line 191). created addFr notifications successfully
+2024-09-24 20:44:16,657:INFO - friends.views views.py (line 115). Friend request sent successfully.
+2024-09-24 20:44:16,737:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:16,741:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:17,138:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:17,143:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:18,303:INFO - homepage.views views.py (line 19). GET request received in HomePageView
+2024-09-24 20:44:18,361:INFO - homepage.views views.py (line 45). Rendering homepage
+2024-09-24 20:44:19,490:DEBUG - posts.views views.py (line 293). posts_is_watched_ids: []
+2024-09-24 20:44:19,598:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:19,603:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:20,103:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:20,107:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:20,613:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:20,618:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:21,110:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:21,117:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:21,605:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:21,610:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:22,090:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:22,095:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:28,965:INFO - friends.views views.py (line 92). Sending friend request to user 1.
+2024-09-24 20:44:29,021:INFO - notifications.views views.py (line 191). created addFr notifications successfully
+2024-09-24 20:44:29,023:INFO - friends.views views.py (line 115). Friend request sent successfully.
+2024-09-24 20:44:29,615:INFO - friends.views views.py (line 92). Sending friend request to user 2.
+2024-09-24 20:44:29,668:INFO - notifications.views views.py (line 191). created addFr notifications successfully
+2024-09-24 20:44:29,671:INFO - friends.views views.py (line 115). Friend request sent successfully.
+2024-09-24 20:44:30,114:INFO - friends.views views.py (line 92). Sending friend request to user 3.
+2024-09-24 20:44:30,159:INFO - notifications.views views.py (line 191). created addFr notifications successfully
+2024-09-24 20:44:30,162:INFO - friends.views views.py (line 115). Friend request sent successfully.
+2024-09-24 20:44:30,581:INFO - friends.views views.py (line 92). Sending friend request to user 4.
+2024-09-24 20:44:30,633:INFO - notifications.views views.py (line 191). created addFr notifications successfully
+2024-09-24 20:44:30,636:INFO - friends.views views.py (line 115). Friend request sent successfully.
+2024-09-24 20:44:31,605:INFO - friends.views views.py (line 92). Sending friend request to user 5.
+2024-09-24 20:44:31,653:INFO - notifications.views views.py (line 191). created addFr notifications successfully
+2024-09-24 20:44:31,655:INFO - friends.views views.py (line 115). Friend request sent successfully.
+2024-09-24 20:44:33,405:INFO - friends.views views.py (line 92). Sending friend request to user 6.
+2024-09-24 20:44:33,477:INFO - notifications.views views.py (line 191). created addFr notifications successfully
+2024-09-24 20:44:33,479:INFO - friends.views views.py (line 115). Friend request sent successfully.
+2024-09-24 20:44:34,047:INFO - friends.views views.py (line 92). Sending friend request to user 7.
+2024-09-24 20:44:34,101:INFO - notifications.views views.py (line 191). created addFr notifications successfully
+2024-09-24 20:44:34,104:INFO - friends.views views.py (line 115). Friend request sent successfully.
+2024-09-24 20:44:34,381:INFO - friends.views views.py (line 92). Sending friend request to user 8.
+2024-09-24 20:44:34,426:INFO - notifications.views views.py (line 191). created addFr notifications successfully
+2024-09-24 20:44:34,428:INFO - friends.views views.py (line 115). Friend request sent successfully.
+2024-09-24 20:44:34,756:INFO - friends.views views.py (line 92). Sending friend request to user 9.
+2024-09-24 20:44:34,810:INFO - notifications.views views.py (line 191). created addFr notifications successfully
+2024-09-24 20:44:34,812:INFO - friends.views views.py (line 115). Friend request sent successfully.
+2024-09-24 20:44:35,161:INFO - friends.views views.py (line 92). Sending friend request to user 10.
+2024-09-24 20:44:35,215:INFO - notifications.views views.py (line 191). created addFr notifications successfully
+2024-09-24 20:44:35,217:INFO - friends.views views.py (line 115). Friend request sent successfully.
+2024-09-24 20:44:36,612:INFO - friends.views views.py (line 92). Sending friend request to user 11.
+2024-09-24 20:44:36,666:INFO - notifications.views views.py (line 191). created addFr notifications successfully
+2024-09-24 20:44:36,669:INFO - friends.views views.py (line 115). Friend request sent successfully.
+2024-09-24 20:44:38,006:INFO - homepage.views views.py (line 19). GET request received in HomePageView
+2024-09-24 20:44:38,060:INFO - homepage.views views.py (line 45). Rendering homepage
+2024-09-24 20:44:39,207:DEBUG - posts.views views.py (line 293). posts_is_watched_ids: []
+2024-09-24 20:44:39,313:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:39,318:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:39,818:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:39,823:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:40,327:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:40,332:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:40,827:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:40,832:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:41,314:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:41,319:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:41,806:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:41,811:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:42,359:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:42,365:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:42,807:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:42,813:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:43,218:DEBUG - posts.views views.py (line 293). posts_is_watched_ids: []
+2024-09-24 20:44:43,339:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:43,344:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:43,417:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:43,422:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:43,821:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:43,828:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:43,898:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:43,903:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:44,291:DEBUG - posts.views views.py (line 293). posts_is_watched_ids: []
+2024-09-24 20:44:44,395:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:44,399:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:44,472:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:44,477:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:44,857:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:44,862:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:44,917:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:44,921:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:45,358:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:45,363:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:45,441:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:45,446:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:45,632:DEBUG - posts.views views.py (line 293). posts_is_watched_ids: []
+2024-09-24 20:44:45,740:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:45,747:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:45,842:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:45,852:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:45,919:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:45,924:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:46,241:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:46,246:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:46,356:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:46,361:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:46,435:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:46,440:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:46,762:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:46,768:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:46,854:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:46,859:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:46,963:INFO - homepage.views views.py (line 19). GET request received in HomePageView
+2024-09-24 20:44:46,966:INFO - homepage.views views.py (line 45). Rendering homepage
+2024-09-24 20:44:46,975:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:46,980:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:48,107:DEBUG - posts.views views.py (line 293). posts_is_watched_ids: []
+2024-09-24 20:44:48,215:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:48,220:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:48,730:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:48,735:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:49,223:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:49,228:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:49,717:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:49,724:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:50,233:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:50,239:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:50,726:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:50,731:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:51,238:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:51,246:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:51,724:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:51,731:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:51,799:INFO - homepage.views views.py (line 19). GET request received in HomePageView
+2024-09-24 20:44:51,802:INFO - homepage.views views.py (line 45). Rendering homepage
+2024-09-24 20:44:52,936:DEBUG - posts.views views.py (line 293). posts_is_watched_ids: []
+2024-09-24 20:44:53,063:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:53,067:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:53,576:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:53,580:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:54,092:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:54,097:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:54,575:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:54,580:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:55,085:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:55,092:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:55,585:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:55,590:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:56,091:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:56,095:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:56,588:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:56,593:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:57,087:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:57,095:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:44:58,059:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:44:58,064:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:45:11,263:INFO - homepage.views views.py (line 19). GET request received in HomePageView
+2024-09-24 20:45:11,330:INFO - homepage.views views.py (line 45). Rendering homepage
+2024-09-24 20:45:12,513:DEBUG - posts.views views.py (line 293). posts_is_watched_ids: []
+2024-09-24 20:45:12,642:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:45:12,647:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:45:13,167:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:45:13,174:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:45:13,642:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:45:13,650:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:45:14,125:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:45:14,132:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:45:14,463:INFO - homepage.views views.py (line 19). GET request received in HomePageView
+2024-09-24 20:45:14,511:INFO - homepage.views views.py (line 45). Rendering homepage
+2024-09-24 20:45:15,645:DEBUG - posts.views views.py (line 293). posts_is_watched_ids: []
+2024-09-24 20:45:15,752:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:45:15,759:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:45:16,249:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:45:16,255:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:45:16,762:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:45:16,768:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:45:17,273:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:45:17,278:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:45:17,769:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:45:17,774:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:45:18,263:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:45:18,268:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:45:18,838:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:45:18,844:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:45:19,262:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:45:19,267:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:45:19,742:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:45:19,748:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:45:20,259:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:45:20,264:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:45:20,453:INFO - userprofiles.views views.py (line 34). GET request received in ProfileView.
+2024-09-24 20:45:20,454:INFO - userprofiles.views views.py (line 47). Redirecting to profile page.
+2024-09-24 20:45:20,517:INFO - userprofiles.views views.py (line 34). GET request received in ProfileView.
+2024-09-24 20:45:20,518:INFO - userprofiles.views views.py (line 40). Rendering profile.html.
+2024-09-24 20:45:20,855:INFO - userprofiles.views views.py (line 76). GET request received in GetProfileView.
+2024-09-24 20:45:20,877:INFO - userprofiles.views views.py (line 89). Successfully retrieved profile data.
+2024-09-24 20:45:20,940:INFO - userprofiles.views views.py (line 76). GET request received in GetProfileView.
+2024-09-24 20:45:20,958:INFO - userprofiles.views views.py (line 89). Successfully retrieved profile data.
+2024-09-24 20:45:21,023:INFO - userprofiles.views views.py (line 76). GET request received in GetProfileView.
+2024-09-24 20:45:21,041:INFO - userprofiles.views views.py (line 89). Successfully retrieved profile data.
+2024-09-24 20:45:21,216:INFO - userprofiles.views views.py (line 76). GET request received in GetProfileView.
+2024-09-24 20:45:21,236:INFO - userprofiles.views views.py (line 89). Successfully retrieved profile data.
+2024-09-24 20:45:21,358:INFO - userprofiles.views views.py (line 76). GET request received in GetProfileView.
+2024-09-24 20:45:21,379:INFO - userprofiles.views views.py (line 89). Successfully retrieved profile data.
+2024-09-24 20:45:21,765:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:45:21,770:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:45:22,285:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:45:22,291:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:45:26,931:INFO - homepage.views views.py (line 19). GET request received in HomePageView
+2024-09-24 20:45:27,003:INFO - homepage.views views.py (line 45). Rendering homepage
+2024-09-24 20:45:28,147:DEBUG - posts.views views.py (line 293). posts_is_watched_ids: []
+2024-09-24 20:45:28,260:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:45:28,265:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:45:29,068:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:45:29,074:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:45:30,068:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:45:30,075:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:45:30,079:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:45:30,085:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:45:31,053:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:45:31,059:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:45:31,064:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:45:31,069:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:45:32,087:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:45:32,092:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:45:32,097:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:45:32,101:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:45:33,070:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:45:33,076:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.
+2024-09-24 20:45:33,082:INFO - reactions.views views.py (line 24). POST request received in GetReactions.
+2024-09-24 20:45:33,087:INFO - reactions.views views.py (line 231). POST request received in IsReactedView.

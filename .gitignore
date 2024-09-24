@@ -72,3 +72,5 @@ media/
 
 postgres-1/
 postgres-2/
+
+.history/
